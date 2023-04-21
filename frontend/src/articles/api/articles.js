@@ -1,6 +1,6 @@
 export const getArticles = async () => {
     const res = await fetch(
-      "http://localhost:5000/api/articles"
+      `${import.meta.env.VITE_API_URL}/api/articles`
     );
     return await res.json();
   };
@@ -8,7 +8,7 @@ export const getArticles = async () => {
   export const createArticle = async ({ title, price, image,token,email,userId}) => {
 
     const res = await fetch(
-      "http://localhost:5000/api/articles",
+      `${import.meta.env.VITE_API_URL}/api/articles`,
       {
         method: 'POST',
         headers: {
@@ -32,7 +32,7 @@ export const getArticles = async () => {
   
   export const deleteArticle = async ({ id,token }) => {
     const res = await fetch(
-      `http://localhost:5000/api/articles/`+id,
+      `${import.meta.env.VITE_API_URL}/api/articles/`+id,
       {
         method: 'DELETE',
         headers: {
@@ -44,6 +44,6 @@ export const getArticles = async () => {
   };
   
   export const searchArticles = async (searchTerm) => {
-    const res = await fetch(`http://localhost:5000/api/articles?search=${searchTerm}`);
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/articles?search=${searchTerm}`);
     return await res.json();
   };
