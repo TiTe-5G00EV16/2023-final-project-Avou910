@@ -1,0 +1,10 @@
+.card {
+  position: relative;
+  margin: 0;
+  border-radius: 6px;
+  padding: rem;
+  overflow: hidden;
+  color: rgb(255, 255, 255);
+  background: 3c3d33;
+}
+
