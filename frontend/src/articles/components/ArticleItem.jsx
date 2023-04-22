@@ -27,7 +27,7 @@ const ArticleItem = props => {
 
   const showConfirmationHandler = () => setShowConfirmationModal(true);
   const cancelConfirmationHandler = () => setShowConfirmationModal(false);
-  
+
   const showEmailHandler = () => setShowEmailModal(true);
   const cancelEmailHandler = () => setShowEmailModal(false);
 
@@ -121,3 +121,4 @@ const ArticleItem = props => {
 };
 
 export default ArticleItem;
+
