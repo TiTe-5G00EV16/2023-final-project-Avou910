@@ -21,4 +21,4 @@ jobs:
         run: npm install
       - name: testing-library tests
         working-directory: ./frontend
-        run: npm run test:ci
+        run: npm run test
