@@ -98,7 +98,37 @@ const loginUser = async (req, res) => {
 
 };
 
+const getUserById = async (req, res) => {
+  try {
+    const id = parseInt(req.params.id);
+    const response = await users.findUserById(id);
+    if(response.length === 1) {
+      res.send(response[0]);
+    }else {
+      res.status(404).json({ message: `User with ID ${id} not found` });
+    }
+  } catch (err) {
+    res.status(500).json({ message: 'Something went wrong' });
+  }
+};
+
+const getUsers = async (req, res) => {
+  try {
+    const response = await users.findAll();
+    if(response) {
+      res.send(response);
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Something went wrong");
+  }
+};
+
+
+
 module.exports = {
   loginUser,
-  signUpUser
+  signUpUser,
+  getUserById,
+  getUsers
 }

@@ -9,7 +9,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 
 import AddArticle from './articles/pages/AddArticle';
 
-import Users from './users/pages/Users';
+import Profile from './users/pages/Profile';
 import Authenticate from './users/pages/Authenticate';
 import MainNavigation from './shared/components/navigation/MainNavigation';
 import { AuthContext } from './shared/context/auth-context';
@@ -86,8 +86,8 @@ function App() {
         <Route path="/articles" exact>
           <Articles />
         </Route>
-        <Route path="/users" exact>
-          <Users />
+        <Route path="/users/profile" exact>
+          <Profile />
         </Route>
         <Route path="/articles/new" exact>
           <AddArticle />

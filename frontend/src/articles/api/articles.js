@@ -5,7 +5,7 @@ export const getArticles = async () => {
     return await res.json();
   };
   
-  export const createArticle = async ({ title, price, image,token,email,userId}) => {
+  export const createArticle = async ({ title, price,description, image,token,email,userId}) => {
 
     const res = await fetch(
       `${import.meta.env.VITE_API_URL}/api/articles`,
@@ -19,6 +19,7 @@ export const getArticles = async () => {
         body: JSON.stringify({
           title,
           price,
+          description,
           image,
           email,
           userId

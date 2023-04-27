@@ -30,7 +30,40 @@ const users = {
         resolve(result);
       });
     });
-  })
+  }),
+
+  findUserById: (id) => new Promise((resolve, reject) => {
+    pool.getConnection((err, connection) => {
+      if (err) {
+        return reject(err);
+      }
+      connection.query('SELECT * FROM users WHERE id = ?;', id,  (err, result) => {
+        connection.release();
+        if(err) {
+          return reject(err);
+        }
+        resolve(result);
+      });
+    });
+  }),
+
+  findAll: () => new Promise((resolve, reject) => {
+    pool.getConnection((err, connection) => {
+      if(err) {
+        return reject(err);
+      }
+
+      connection.query('SELECT * FROM users', (err, result) => {
+        connection.release();
+        if(err) {
+          return reject(err);
+        }
+        resolve(result);
+      });
+    });
+  }),
+
+
 };
 
 module.exports = users;

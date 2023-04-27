@@ -1,26 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
+import { useQuery } from 'react-query';
 import { AuthContext } from "../../shared/context/auth-context";
 import LoadingSpinner from "../../shared/components/loadingspinner/LoadingSpinner";
 import { getUser } from "../api/users";
 
+import './Profile.css'
+
 const Profile = () => {
   const auth = useContext(AuthContext);
-  const [userData, setUserData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const data = await getUser(auth.token);
-        setUserData(data);
-        setIsLoading(false);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchUserData();
-  }, [auth.token]);
+  const { isLoading, error, data } = useQuery('userData', () => getUser({ token: auth.token, id: auth.userId }));
 
   if (isLoading) {
     return (
@@ -30,10 +19,20 @@ const Profile = () => {
     );
   }
 
+  if (error) {
+    return <p>An error has occurred: {error.message}</p>;
+  }
+
+  if (!data) {
+    return <div className="center">
+    <LoadingSpinner />
+  </div>
+  }
+
   return (
     <div className="profile">
-      <p>Email: {userData.email}</p>
-      <p>Joined on: {new Date(userData.createdAt).toLocaleDateString()}</p>
+      <p>Email: {data && data.email}</p>
+      <p>Joined on: {data && new Date(data.created).toLocaleDateString()}</p>
     </div>
   );
 };

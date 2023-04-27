@@ -7,6 +7,7 @@ const TEST_ARTICLE_DATA = {
   "id": 1,
   "title": "Test Article",
   "price": 9.99,
+  "description": "TestiTesti",
   "image": "https://via.placeholder.com/150",
   "email": "test@test.com",
   "userId": 1
@@ -33,6 +34,7 @@ describe('The ArticleItem', () => {
       id={TEST_ARTICLE_DATA.id}
       title={TEST_ARTICLE_DATA.title}
       price={TEST_ARTICLE_DATA.price}
+      description={TEST_ARTICLE_DATA.description}
       image={TEST_ARTICLE_DATA.image}
       email={TEST_ARTICLE_DATA.email}
       userId={TEST_ARTICLE_DATA.userId}
@@ -40,6 +42,7 @@ describe('The ArticleItem', () => {
 
     expect(screen.getByText('Article: Test Article')).toBeInTheDocument();
     expect(screen.getByText('Price: 9.99')).toBeInTheDocument();
+    expect(screen.getByText('Description: TestiTesti')).toBeInTheDocument();
     expect(screen.getByText('Email: test@test.com')).toBeInTheDocument();
     expect(screen.getByRole('img')).toBeInTheDocument();
     expect(screen.getByAltText('Test Article')).toBeInTheDocument();

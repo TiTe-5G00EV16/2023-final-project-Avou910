@@ -15,6 +15,7 @@ import { createArticle } from '../api/articles';
 const AddArticle = () => {
   const titleRef = useRef();
   const priceRef = useRef();
+  const descriptionRef = useRef();
   const imageRef = useRef();
 
   const auth = useContext(AuthContext);
@@ -27,6 +28,7 @@ const AddArticle = () => {
     createArticleMutation.mutate({
       title: titleRef.current.value,
       price: priceRef.current.value,
+      description: descriptionRef.current.value,
       image: imageRef.current.value,
       email: auth.email,
       token: auth.token,
@@ -41,6 +43,7 @@ const AddArticle = () => {
     <form className='article-form' onSubmit={articleSubmitHandler}>
       <Input id="title" ref={titleRef} type="text" label="Title" />
       <Input id="price" ref={priceRef} type="text" label="Price" />
+      <Input id="description" ref={descriptionRef} type="text" label="Description" />
       <Input id="image" ref={imageRef} type="text" label="Image Link" />
       
 

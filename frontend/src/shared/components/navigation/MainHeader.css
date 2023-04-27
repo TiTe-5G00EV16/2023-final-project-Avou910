@@ -6,8 +6,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: rgb(53, 53, 53);
+  background: #022144;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+  border-bottom: solid;
+  border-color: rgb(153, 138, 0);
   padding: 0 1rem;
   z-index: 5;
 }

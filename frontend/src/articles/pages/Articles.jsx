@@ -10,12 +10,10 @@ import SearchBar from "../../shared/components/searchbar/SearchBar";
 
 const Articles = () => {
   const auth = useContext(AuthContext);
-  const { isLoading, error, data } = useQuery(
-    "articlesData", 
-    getArticles
-  );
+  const { isLoading, error, data } = useQuery("articlesData", getArticles);
 
   const [filteredArticles, setFilteredArticles] = useState([]);
+
   const handleFilter = (articles) => {
     setFilteredArticles(articles);
   };

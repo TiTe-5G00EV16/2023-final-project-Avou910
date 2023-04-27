@@ -20,6 +20,7 @@ const ArticlesList = props => {
         id={item.id}
         title={item.title}
         price={item.price}
+        description={item.description}
         image={item.image}
         email={item.email}
         userId={item.userId}

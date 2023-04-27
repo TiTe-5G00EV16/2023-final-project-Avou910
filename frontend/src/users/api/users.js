@@ -36,9 +36,23 @@ export const loginUser = async ({email, password}) => {
   return await res.json();
 };
 
-export const getUser = async () => {
+export const getUser = async ({token, id}) => {
+
   const res = await fetch(
-  `${import.meta.env.VITE_API_URL}/api/users`
+    `${import.meta.env.VITE_API_URL}/api/users/${id}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  );
+  const data = await res.json();
+  return data;
+};
+
+export const getAllUsers = async () => {
+  const res = await fetch(
+    `${import.meta.env.VITE_API_URL}/api/users`
   );
   return await res.json();
 };

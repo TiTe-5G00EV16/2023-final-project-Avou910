@@ -1,5 +1,5 @@
-.authentication__header {
-  color: white;
+.authentication_header {
+  color:#022144;
   text-align: center;
 }
 
@@ -8,8 +8,18 @@
   max-width: 25rem;
   margin: 7rem auto;
   text-align: center;
+  background-color: white;
+  border-radius: 10%;
 }
 
 .authentication form {
   margin-bottom: 1rem;
+  color: #000000;
+}
+
+.error-message{
+  font-size: 30px;
+  color: rgb(255, 0, 0);
+  background-color:#ffffff;
+  text-align: center;
 }

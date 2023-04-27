@@ -13,7 +13,9 @@ import './Authenticate.css';
 const Authenticate = props => {
   const emailRef = useRef();
   const passwordRef = useRef();
+  const passwordConfirmRef = useRef();
 
+  const [errorMessage, setErrorMessage] = useState('');
   const [isLoginMode, setLoginMode] = useState(true);
   const auth = useContext(AuthContext);
 
@@ -29,6 +31,8 @@ const Authenticate = props => {
     },
     onError: (error) => {
       console.log(error)
+      setErrorMessage('Email already exists');
+
     }
   });
 
@@ -40,37 +44,57 @@ const Authenticate = props => {
     },
     onError: (error) => {
       console.log(error)
+      setErrorMessage('Email or password is incorrect');
+
     }
   });
+
+  
 
   const onSubmitHandler = event => {
     event.preventDefault();
     if(isLoginMode) {
+      if (!emailRef.current.value || !passwordRef.current.value) {
+        setErrorMessage('Please fill in all required fields');
+      } else {
       loginUserMutation.mutate({
         email: emailRef.current.value,
         password: passwordRef.current.value
       });
-    } else {
+    } 
+  }else {
+    if (!emailRef.current.value || !passwordRef.current.value || !passwordConfirmRef.current.value) {
+      setErrorMessage('Please fill in all required fields');
+    } else if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+        setErrorMessage('Passwords do not match');
+      }
+    
+    else {
       signUpUserMutation.mutate({
         email: emailRef.current.value,
         password: passwordRef.current.value
       });
     }
   }
+}
 
   return (
     <Card className="authentication">
-      <h2>{isLoginMode? 'Login': 'Sign Up'}</h2>
+      <h2 className='authentication_header'>{isLoginMode? 'LOG IN': 'SIGN UP'}</h2>
+     <p className="error-message">{errorMessage}</p>
       <form onSubmit={onSubmitHandler}>
-        <Input id="email" ref={emailRef} type="email" label="Email" />
-        <Input id="password" ref={passwordRef} type="password" label="Password" /> 
-        <Button type="submit">
-          {isLoginMode? 'LOGIN' : 'SIGNUP'}
-        </Button>
+        <Input id="email" ref={emailRef} type="email" label="Email" required />
+        <Input id="password" ref={passwordRef} type="password" label="Password" required /> 
+        {isLoginMode ? null : <Input id="password-confirm" ref={passwordConfirmRef} type="password" label="Confirm Password" required />}
+        <div className="authentication__buttons">
+          <Button type="submit">
+            {isLoginMode? 'LOG IN' : 'SIGN UP'}
+          </Button>
+        </div>
       </form>
-      <Button inverse onClick={switchModeHandler}>
-        {isLoginMode? 'SIGN UP':'LOGIN'}
-      </Button>
+      <Button type="button" onClick={switchModeHandler}>
+            {isLoginMode? 'SIGN UP' : 'LOG IN'}
+          </Button>
     </Card>
   )
 };

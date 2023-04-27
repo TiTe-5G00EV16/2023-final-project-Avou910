@@ -29,6 +29,7 @@ const createArticle = async (req, res) => {
   const schema = Joi.object({
     title: Joi.string().min(1).required(),
     price: Joi.string().min(1).required(),
+    description: Joi.string().min(1).required(),
     image: Joi.string(),
     email: Joi.string(),
     userId: Joi.string()
@@ -45,6 +46,7 @@ const createArticle = async (req, res) => {
   const article = {
     title: req.body.title,
     price: req.body.price,
+    description: req.body.description,
     image: req.body.image,
     email: req.body.email,
     userId: req.body.userId

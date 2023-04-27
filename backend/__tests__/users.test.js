@@ -56,4 +56,15 @@ describe('SIGNUP users endpoint', () => {
       expect(response.body.token).toBeTruthy();
   }); 
   
+
+  test('should return 200 if item was found', (done) => {
+    supertest(app)
+      .get('/api/users/${id}')
+      .expect(200)
+      .end(done);
+  });
+
+
 });
+
+

@@ -102,6 +102,7 @@ describe ('POST article endpoint', ()=> {
     const article = {
       title: 'Desk',
       price: '20',
+      description: 'describe me',
       email: loggedInUser.email,
       userId:loggedInUser.id,
 
@@ -119,5 +120,7 @@ describe ('POST article endpoint', ()=> {
     expect(response.body.id).toBeTruthy();
     expect(response.body.title).toEqual('Desk');
     expect(response.body.price).toEqual('20');
+    expect(response.body.description).toEqual('describe me');
+
   });
 });

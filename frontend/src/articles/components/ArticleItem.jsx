@@ -81,12 +81,12 @@ const ArticleItem = props => {
           </>
         }
       >
-        <div>
+        <div className="modal-email">
           <label htmlFor="subject">Subject:</label>
-          <input type="text" id="subject" defaultValue={props.title}/>  
+          <input className="modal-email-subject" type="text" id="subject" defaultValue={props.title}/>  
 
           <label htmlFor="message">Message:</label>
-          <textarea id="message">
+          <textarea className="modal-email-message" id="message">
             Hey, is this still available?
             </textarea>
 
@@ -101,9 +101,8 @@ const ArticleItem = props => {
           <div className="article-item__info">
             <h3>Article: {props.title}</h3>
             <h3>Price: {props.price}</h3>
-            <h4>Email: {props.email}</h4>
-
-
+            <h3>Description: {props.description}</h3>
+            <h3>Email: {props.email}</h3>
           </div>
 
           <div className="article-item_actions">
