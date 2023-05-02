@@ -3,8 +3,7 @@ import { useQuery } from 'react-query';
 import { AuthContext } from "../../shared/context/auth-context";
 import LoadingSpinner from "../../shared/components/loadingspinner/LoadingSpinner";
 import { getUser } from "../api/users";
-
-import './Profile.css'
+import UserProfile from "../components/UserProfile";
 
 const Profile = () => {
   const auth = useContext(AuthContext);
@@ -30,10 +29,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="profile">
-      <p>Email: {data && data.email}</p>
-      <p>Joined on: {data && new Date(data.created).toLocaleDateString()}</p>
-    </div>
+     <UserProfile data={data} />
   );
 };
 

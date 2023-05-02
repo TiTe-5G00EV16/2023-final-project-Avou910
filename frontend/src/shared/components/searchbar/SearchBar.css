@@ -1,11 +1,11 @@
 .search-bar-form {
-display: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 2rem;
   grid-row-gap: 1rem;
   align-items: left;
   list-style: none;
-  margin: 5rem auto;
+  margin: 10rem auto;
   max-width: 10rem;
   }
   

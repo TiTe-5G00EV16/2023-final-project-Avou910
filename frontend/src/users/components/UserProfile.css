@@ -1,0 +1,31 @@
+
+
+  .profile-container {
+    list-style: none;
+    margin: 0  auto;
+    margin-top: 200px;
+    padding: 1rem;
+    width: 100%;
+    max-width: 40rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.329);
+    border-radius: 6px;
+    background: rgb(255, 255, 255);
+  }
+
+
+   .h3{
+    color: #022144;
+    padding: 1rem;
+    font-size: 2vw;
+    margin-top: 2px;
+    vertical-align: top;
+    text-align: center;
+   }
+
+   .p{
+    color: #022144;
+    padding: 1rem;
+    font-size: 1vw;
+    margin-top: 5px;
+    text-align: center;
+   }

@@ -15,10 +15,28 @@ const SearchBar = (props) => {
     props.onFilter(filteredArticles);
   };
 
-  const onClear = () => {
+  /*const onClear = () => {
     setSearchTerm("");
     props.onFilter(props.articles);
+    if (filteredArticles.length === 0) {
+      props.onNoResults();
+    }
+  };*/
+
+  const onClear = () => {
+    setSearchTerm("");
+    const articles = props.articles;
+    const filteredArticles = articles.filter((article) =>
+      article.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredArticles(filteredArticles);
+    if (filteredArticles.length === 0) {
+      props.onNoResults();
+    } else {
+      props.onFilter(filteredArticles);
+    }
   };
+  
 
   return (
     <form className="search-bar-form" onSubmit={onSearch}>
@@ -27,7 +45,7 @@ const SearchBar = (props) => {
         type="text"
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
-        placeholder="Search articles"
+        placeholder="Search by keyword"
       />
       <button className="search-bar-button" type="submit">
         Search

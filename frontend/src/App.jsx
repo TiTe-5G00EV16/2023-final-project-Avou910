@@ -17,6 +17,9 @@ import { AuthContext } from './shared/context/auth-context';
 import './App.css';
 import Articles from './articles/pages/Articles';
 import UserArticles from './articles/pages/UserArticles';
+import ResetPassword from './users/pages/ResetPassword';
+import NewPassword from './users/pages/NewPassword';
+
 
 const queryClient = new QueryClient();
 
@@ -109,6 +112,12 @@ function App() {
           </Route>
         <Route path="/auth">
           <Authenticate />
+        </Route>
+        <Route path="/resetpassword">
+          <ResetPassword />
+        </Route>
+        <Route path="/newpassword">
+          <NewPassword />
         </Route>
         <Redirect to="/" />
       </Switch>

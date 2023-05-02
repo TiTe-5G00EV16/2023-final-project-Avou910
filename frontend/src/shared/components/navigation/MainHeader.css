@@ -1,15 +1,16 @@
 .main-header {
   width: 100%;
-  height: 4rem;
+  height: 8rem;
   display: flex;
   align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  background: #022144;
+  background: #0b131d;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   border-bottom: solid;
-  border-color: rgb(153, 138, 0);
+  border-color: rgb(255, 255, 255);
+  border-width: 8px;
   padding: 0 1rem;
   z-index: 5;
 }

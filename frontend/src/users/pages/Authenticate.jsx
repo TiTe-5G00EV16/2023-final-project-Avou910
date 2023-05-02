@@ -90,12 +90,26 @@ const Authenticate = props => {
           <Button type="submit">
             {isLoginMode? 'LOG IN' : 'SIGN UP'}
           </Button>
+       
         </div>
+     
+
       </form>
+      <br></br>
+
       <Button type="button" onClick={switchModeHandler}>
             {isLoginMode? 'SIGN UP' : 'LOG IN'}
           </Button>
+          <br></br>
+          <br></br>
+
+      <a href="/resetpassword">Forgot your password?</a>
+
+
     </Card>
+    
+
+
   )
 };
 

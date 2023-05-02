@@ -6,9 +6,10 @@ import NavLinks from './NavLinks';
 import SideDrawer from './SideDrawer';
 import Backdrop from '../backdrop/Backdrop';
 
+
 import './MainNavigation.css';
 
-const MainNavigation = () => {
+const MainNavigation = ({ articles, onFilter }) => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
   const openDrawerHandler = () => {
@@ -18,6 +19,7 @@ const MainNavigation = () => {
   const closeDrawerHandler = () => {
     setDrawerIsOpen(false);
   };
+
 
   return (
     <>

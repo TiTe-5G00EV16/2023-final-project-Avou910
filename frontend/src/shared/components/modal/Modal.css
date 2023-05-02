@@ -63,6 +63,14 @@
   background: #ffffff;
   color: rgb(0, 0, 0);
 }
+.modal-email-emailTo{
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+}
 
 .modal-email-subject{
   font-size: 30px;
