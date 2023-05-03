@@ -14,6 +14,7 @@ const Authenticate = props => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const [errorMessage, setErrorMessage] = useState('');
   const [isLoginMode, setLoginMode] = useState(true);
@@ -103,7 +104,7 @@ const Authenticate = props => {
           <br></br>
           <br></br>
 
-      <a href="/resetpassword">Forgot your password?</a>
+          <a href={`${API_URL}/resetpassword`}>Forgot your password?</a>
 
 
     </Card>
