@@ -12,6 +12,8 @@ import './ResetPassword.css';
 const ResetPassword = props => {
 
     const emailRef = useRef();
+    const frontendUrl = import.meta.env.VITE_FRONTEND_URL;
+
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const { isError, isSuccess, mutate } = useMutation(
@@ -64,7 +66,7 @@ const ResetPassword = props => {
         </div>
       )}
       <br />
-      <a href="/auth">Go back to log in or sign up</a>
+      <a href={`${frontendUrl}/auth`}>Go back to log in or sign up</a>
     </Card>
   );
 };
