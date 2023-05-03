@@ -34,13 +34,17 @@ const Email = props => {
     sendEmailMutation.mutate({
       emailTo: props.emailTo,
       subject: `from Marketplace "${props.title}"`,
-      message: message,
+      message: `${message} \n\n\nTHIS IS JUST A NOTICE! \nPlease reply to directly to: ${props.emailFrom}`
     });
   }
 
   return (
     <>
+
+    <div className="article-item-actions">{auth.isLoggedIn &&
       <Button onClick={showModalHandler}>BUY</Button>
+    }
+      </div>
 
       <Modal 
         show={showModal}

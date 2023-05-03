@@ -64,14 +64,17 @@ const ArticleItem = props => {
             <h3>Email: {props.email}</h3>
           </div>
 
+          <Email 
+            emailTo={props.email} 
+            title={props.title}
+            emailFrom={auth.email}
+          />
+
           <div className="article-item_actions">
             {auth.isLoggedIn && auth.email === props.email && (
               <Button danger onClick={showConfirmationHandler}>Delete</Button>
             )}
-             <Email 
-            emailTo={props.email} 
-            title={props.title}
-          />
+         
           </div>
         </Card>
       </li>
