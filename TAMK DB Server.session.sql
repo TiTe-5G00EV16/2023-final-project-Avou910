@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS `articles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+INSERT INTO `users` (`id`, `email`, `password`) VALUES (UUID(), 'test@example.com', 'password123');
 
 INSERT INTO `articles` (`title`,`price`,`description`,`image`,`email`,`userId`) VALUES ('Chair','10.99','Nice blue chair in good condition','https://t3.ftcdn.net/jpg/03/14/57/92/240_F_314579210_7Pzxxh7HCwXPz2XPRLawqVuj241h5II2.jpg','john@wick.com','9d92a963-b40b-4821-ab16-1b34b0309329');
 INSERT INTO `articles` (`title`,`price`,`description`,`image`,`email`,`userId`) VALUES ('Table','50','Old wooden table','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrNScIhQ3DQ0o3FQrH4Du5jlhs6BknG2Gc7Q&usqp=CAU','tony@stark.com','5e3f94f5-96b2-499b-bede-903e3a203e52');

@@ -43,8 +43,11 @@ const UserProfile =  ({data})  => {
         Joined on:{" "}
         {data && new Date(data.created).toLocaleDateString()}
       </p>
-      <Button danger onClick={showConfirmationHandler}>
-        Delete Profile
+
+      <Button danger onClick={(event) => {
+          event.preventDefault();
+          showConfirmationHandler();}}> 
+            Delete Profile
       </Button>
 
       <Modal
@@ -62,11 +65,9 @@ const UserProfile =  ({data})  => {
           </>
         }
       >
-        <p>Are you sure you want to delete your account?</p>
+        <p>When you delete your account you will be automatically logged out.</p>
         
       </Modal>
-
-      
     </form>
   );
 };
