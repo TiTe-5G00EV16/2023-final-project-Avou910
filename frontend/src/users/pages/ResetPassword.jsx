@@ -1,5 +1,7 @@
 import { useRef, useState, useContext } from 'react';
 import { useMutation } from 'react-query';
+import { Link } from "react-router-dom";
+
 
 import Button from '../../shared/components/button/Button';
 import Card from '../../shared/components/card/Card';
@@ -66,7 +68,7 @@ const ResetPassword = props => {
         </div>
       )}
       <br />
-      <a href={`${frontendUrl}/auth`}>Go back to log in or sign up</a>
+      <Link to="/auth"> Go back to log in or sign up</Link>
     </Card>
   );
 };

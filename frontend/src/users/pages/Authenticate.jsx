@@ -1,5 +1,6 @@
 import { useRef, useState, useContext } from 'react';
 import { useMutation } from 'react-query';
+import { Link } from "react-router-dom";
 
 import Button from '../../shared/components/button/Button';
 import Card from '../../shared/components/card/Card';
@@ -104,7 +105,7 @@ const Authenticate = props => {
           <br></br>
           <br></br>
 
-          <a href={`${frontendUrl}/resetpassword`}>Forgot your password?</a> 
+          <Link to="/resetpassword">Forgot your password?</Link>
 
     </Card>
     
