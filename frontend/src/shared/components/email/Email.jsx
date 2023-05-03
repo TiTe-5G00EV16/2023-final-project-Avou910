@@ -34,7 +34,7 @@ const Email = props => {
     sendEmailMutation.mutate({
       emailTo: props.emailTo,
       subject: `from Marketplace "${props.title}"`,
-      message: `${message} \n\n\nTHIS IS JUST A NOTICE! \nPlease reply to directly to: ${props.emailFrom}`
+      message: `${message} \n\n\nTHIS IS JUST A NOTICE! \nPlease reply directly to: ${props.emailFrom}`
     });
   }
 

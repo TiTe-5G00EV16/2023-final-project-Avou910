@@ -22,7 +22,6 @@ const sendEmail = async (req, res, next) => {
 
   const sendResetPasswordEmail = async (email,resetToken) => {
     const resetPasswordLink = `${process.env.NEWPASSWORD_URL}?token=${resetToken}&email=${email}`;
-    console.log('Sending email to: and check thte token ', email,resetToken);
     try {
       const transporter = await createTransporter();
       let mailOptions = {

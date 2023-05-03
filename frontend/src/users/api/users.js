@@ -57,8 +57,6 @@ export const getAllUsers = async () => {
 };
 
 export const deleteUser = async ({ id,token }) => {
-  console.log("check id when deleting",id)
-  console.log("check token when deleting",token)
 
   const res = await fetch(
     `${import.meta.env.VITE_API_URL}/api/users/`+id,
@@ -76,7 +74,6 @@ return data;
 
 
 export const resetPassword = async (email) => {
-  console.log("do we get the email?",email)
   const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/check-email`, {
     method: 'POST',
     headers: {
@@ -93,7 +90,6 @@ export const resetPassword = async (email) => {
 };
 
 export const updatePassword = async (email,token, newPassword) => {
-  console.log("does the frontend work properly",email,token, newPassword)
   const response = await fetch(`${import.meta.env.VITE_API_URL}/api/users/reset-password`,
   {
     method: 'PATCH',

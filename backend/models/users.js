@@ -64,7 +64,6 @@ const users = {
   }),
 
   deleteById: (id) => new Promise((resolve, reject) => {
-    console.log("model id check",id)
     const deleteQuery = 'DELETE FROM users WHERE id=?;';
     pool.getConnection((err, connection) => {
       if(err) {
@@ -81,7 +80,6 @@ const users = {
   }),
 
   setNewPassword: (email, token, hashedPassword) => new Promise((resolve, reject) => {
-    console.log("triple dpuble check",email,token, hashedPassword)
     pool.getConnection((err, connection) => {
       if(err) {
         return reject(err);
@@ -97,7 +95,6 @@ const users = {
   }),
 
   updateResetToken: (email, resetToken) => new Promise((resolve, reject) => {
-    console.log("id and reset token check",email,resetToken)
     pool.getConnection((err, connection) => {
       if(err) {
         return reject(err);

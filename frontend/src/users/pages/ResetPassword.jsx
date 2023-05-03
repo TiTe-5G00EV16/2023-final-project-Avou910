@@ -46,7 +46,7 @@ const ResetPassword = props => {
 
         <div className="authentication__buttons">
           <Button type="submit" disabled={isLoading}>
-            {isLoading ? 'Sending...' : 'Reset Password'}
+            {isLoading ? 'Sending...' : 'Send link to reset Password'}
           </Button>
         </div>
       </form>
@@ -55,7 +55,7 @@ const ResetPassword = props => {
       {isSuccess && (
         <div className="resetpassword_header">
           An email has been sent to your inbox with instructions for resetting
-          your password.
+          your password. This might take a few minutes.
         </div>
       )}
       {isError && (

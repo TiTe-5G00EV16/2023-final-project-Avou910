@@ -61,7 +61,10 @@ const ArticleItem = props => {
             <h1>{props.title}</h1>
             <h2>Price: {props.price}</h2>
             <p>Description: {props.description}</p>
+            <div>{auth.isLoggedIn &&
             <h3>Email: {props.email}</h3>
+}
+          </div>
           </div>
 
           <Email 

@@ -151,7 +151,6 @@ const checkResetPassword = async (req, res, next) => {
     const resetToken = v4();
     await users.updateResetToken(email.email, resetToken);
 
-    console.log("any secrest here",process.env.JWT_SECRET)
 
     await sendResetPasswordEmail(email.email,resetToken);
     return res.status(200).json({
@@ -167,7 +166,6 @@ const checkResetPassword = async (req, res, next) => {
 
 const updatePassword = async (req, res) => {
   const { email, token, newPassword } = req.body;
-  console.log("backend chekcking",email,token,newPassword)
 
   try {
     const result = await users.findByEmail(email);

@@ -1,7 +1,7 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, } from 'react';
 import { useMutation } from 'react-query';
 import { useParams } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 
 import Button from '../../shared/components/button/Button';
 import Card from '../../shared/components/card/Card';
@@ -12,6 +12,7 @@ import { updatePassword } from '../api/users';
 import './NewPassword.css';
 
 const NewPassword = props => {
+    const history = useHistory(); 
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const email = searchParams.get('email');
@@ -21,6 +22,7 @@ const NewPassword = props => {
 
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
 
     const handlePasswordSubmit = event => {
         event.preventDefault();
@@ -35,11 +37,23 @@ const NewPassword = props => {
         try {
           updatePassword( email,token, newPassword);
           setIsLoading(false);
+          setSuccessMessage('New password confirmed. You will be redirected to the login page.');
+
         } catch (error) {
           setIsLoading(false);
           setErrorMessage(error.message || 'Failed to update password.');
         }
     };
+
+    useEffect(() => {
+        let timer;
+        if (successMessage) {
+            timer = setTimeout(() => {
+                history.push('/auth');
+            }, 5000);
+        }
+        return () => clearTimeout(timer);
+    }, [successMessage, history]);
 
     return (
         <Card className="resetpassword">
@@ -54,6 +68,7 @@ const NewPassword = props => {
                 </div>
             </form>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
+            {successMessage && <p className="success-message">{successMessage}</p>}
         </Card>
     );
 };
