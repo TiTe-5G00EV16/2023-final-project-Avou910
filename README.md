@@ -16,4 +16,4 @@ Clone the repo or download .zip.
 
 docker commands:
 
-$docker compose up -d
+```docker compose up -d```
