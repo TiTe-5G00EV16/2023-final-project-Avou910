@@ -7,7 +7,7 @@
 # PROJECT SUMMARY
 The final project of the web programming course involved building an online marketplace where users could post items for sale. The project required building both the front-end and back-end of the application using React, Node, and a SQL database, and deploying it.
 
-The result was a functional marketplace app with a React front-end, Node.js back-end, and MySQL database. The app was deployed using Render, making it reachable to users. Overall, the project provided valuable experience in developing a full-stack application and deploying it to a cloud service.
+The result is a functional marketplace app with a React front-end, Node.js back-end, and MySQL database. Users, whether logged in or not, can view and search for articles by keywords. Logged-in users are able to post articles for sale, delete their articles, and contact other users about their articles. They can also retrieve forgotten passwords and delete their accounts from the database. The app is deployed using Render, making it accessible to users. Overall, the project provides valuable experience in developing a full-stack application and deploying it to a cloud service.
 
 
 # Installation instructions
