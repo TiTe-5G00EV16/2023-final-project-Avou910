@@ -16,4 +16,18 @@ Clone the repo or download .zip.
 
 docker commands:
 
-  docker compose up -d
+ ```docker compose up -d```
+ 
+ start the backend:
+ 
+ ```cd backend```
+ ```npm install```
+ ```npm install```
+
+start the frontend
+
+ ```cd frontend```
+ ```npm install```
+ ```npm run dev```
+
+ 
