@@ -10,5 +10,9 @@ The final project of the web programming course involved building an online mark
 The result was a functional marketplace app with a React front-end, Node.js back-end, and MySQL database. The app was deployed using Render, making it reachable to users. Overall, the project provided valuable experience in developing a full-stack application and deploying it to a cloud service.
 
 
+# Installation instructions
 
+Clone the repo or download .zip.
 
+docker commands:
+´´´docker compose up -d´´´
