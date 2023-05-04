@@ -32,37 +32,48 @@ JWT_SECRET ='my-secret'
 
 VITE_API_URL= 'http://localhost:5000'
 
-NEWPASSWORD_URL='http://127.0.0.1:5173/newpassword'```
-
+NEWPASSWORD_URL='http://127.0.0.1:5173/newpassword'
+```
 
 The following is for the OAUTH protocol, without these all email related functions will cause error.
 Here is great tutorial for this https://alexb72.medium.com/how-to-send-emails-using-a-nodemailer-gmail-and-oauth2-fe19d66451f9
 
+```
 EMAIL_USERNAME='Here you should put an gmail address '
 CLIENT_ID = 'your unique client id'
 CLIENT_SECRET = 'your unique client secret'
 REFRESH_TOKEN = 'your unique client refresh_token'
+```
 
 
 
 ### docker commands:
 
- Note that you must have docker running first ```docker compose up -d```
+ Note that you must have docker running first
+ 
+ ```docker compose up -d
+ ```
  
  ### start the backend:
  
- ```cd backend```
+ ```cd backend
+ ```
  
- ```npm install```
+ ```npm install
+ ```
  
- ```npm run dev```
+ ```npm run dev
+ ```
 
 ### start the frontend
 
- ```cd frontend```
+ ```cd frontend
+ ```
  
- ```npm install```
+ ```npm install
+ ```
  
- ```npm run dev```
+ ```npm run dev
+ ```
 
  
