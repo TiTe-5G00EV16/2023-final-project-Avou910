@@ -51,29 +51,36 @@ REFRESH_TOKEN = 'your unique client refresh_token'
 
  Note that you must have docker running first
  
- ```docker compose up -d
+ ```
+docker compose up -d
  ```
  
  ### start the backend:
  
- ```cd backend
+ ```
+cd backend
  ```
  
- ```npm install
+ ```
+npm install
  ```
  
- ```npm run dev
+ ```
+npm run dev
  ```
 
 ### start the frontend
 
- ```cd frontend
+ ```
+cd frontend
  ```
  
- ```npm install
+ ```
+npm install
  ```
  
- ```npm run dev
+ ```
+npm run dev
  ```
 
  
