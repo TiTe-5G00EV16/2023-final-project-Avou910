@@ -15,4 +15,5 @@ The result was a functional marketplace app with a React front-end, Node.js back
 Clone the repo or download .zip.
 
 docker commands:
-$ docker compose up -d
+
+$docker compose up -d
