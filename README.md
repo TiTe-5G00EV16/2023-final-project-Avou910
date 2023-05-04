@@ -19,12 +19,19 @@ Before running the commands you must create .env file. Inside the .env file you 
 
 
 MYSQL_HOST='localhost'
+
 MYSQL_USERNAME='root'
+
 MYSQL_PASSWORD='example'
+
 MYSQL_DATABASE='example_database'
+
 JWT_KEY='my-key'
+
 JWT_SECRET ='my-secret'
+
 VITE_API_URL= 'http://localhost:5000'
+
 NEWPASSWORD_URL='http://127.0.0.1:5173/newpassword'
 
 
