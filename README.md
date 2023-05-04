@@ -2,7 +2,7 @@
 
 # Web Programming course 2023 - Final Project - Marketplace
 
-## link to deployed render page https://marketplace-2azd.onrender.com/
+## Link to deployed render page https://marketplace-2azd.onrender.com/
 
 # PROJECT SUMMARY
 The final project of the web programming course involved building an online marketplace where users could post items for sale. The project required building both the front-end and back-end of the application using React, Node, and a SQL database, and deploying it.
