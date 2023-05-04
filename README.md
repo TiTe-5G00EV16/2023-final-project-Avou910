@@ -14,11 +14,11 @@ The result was a functional marketplace app with a React front-end, Node.js back
 
 Clone the repo or download .zip.
 
-###docker commands:
+### docker commands:
 
  ```docker compose up -d```
  
- ###start the backend:
+ ### start the backend:
  
  ```cd backend```
  
@@ -26,7 +26,7 @@ Clone the repo or download .zip.
  
  ```npm install```
 
-###start the frontend
+### start the frontend
 
  ```cd frontend```
  
