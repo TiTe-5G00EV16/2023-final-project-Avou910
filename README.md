@@ -18,7 +18,7 @@ Clone the repo or download .zip.
 Before running the commands you must create .env file. Inside the .env file you will need:
 
 
-MYSQL_HOST='localhost'
+```MYSQL_HOST='localhost'
 
 MYSQL_USERNAME='root'
 
@@ -32,7 +32,7 @@ JWT_SECRET ='my-secret'
 
 VITE_API_URL= 'http://localhost:5000'
 
-NEWPASSWORD_URL='http://127.0.0.1:5173/newpassword'
+NEWPASSWORD_URL='http://127.0.0.1:5173/newpassword'```
 
 
 The following is for the OAUTH protocol, without these all email related functions will cause error.
