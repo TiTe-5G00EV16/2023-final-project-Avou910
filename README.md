@@ -15,7 +15,7 @@ The result is a functional marketplace app with a React front-end, Node.js back-
 Clone the repo or download .zip.
 
 
-Before running the commands you must create .env file. Inside the .env file you will need:
+Before running the commands you must create .env file for the backend and frontend. Inside the backend .env file you will need:
 
 
 ```MYSQL_HOST='localhost'
@@ -30,10 +30,14 @@ JWT_KEY='my-key'
 
 JWT_SECRET ='my-secret'
 
-VITE_API_URL= 'http://localhost:5000'
-
 NEWPASSWORD_URL='http://127.0.0.1:5173/newpassword'
 ```
+Frontend .env file
+
+```
+VITE_API_URL= 'http://localhost:5000'
+```
+
 
 The following is for the OAUTH protocol, without these all email related functions will cause error.
 Here is great tutorial for this https://alexb72.medium.com/how-to-send-emails-using-a-nodemailer-gmail-and-oauth2-fe19d66451f9
