@@ -14,7 +14,8 @@ app.use(express.json());
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://simple-marketplace.onrender.com'
+    'https://simple-marketplace.onrender.com',
+    'https://marketplace-2azd.onrender.com'
   ] 
 }));
 
