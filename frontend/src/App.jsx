@@ -107,13 +107,13 @@ function App() {
         <Route path="/articles" exact>
           <Articles />
           </Route>
-        <Route path="/auth">
+        <Route path="/auth" exact>
           <Authenticate />
         </Route>
-        <Route path="/resetpassword">
+        <Route path="/resetpassword" exact>
           <ResetPassword />
         </Route>
-        <Route path="/newpassword">
+        <Route path="/newpassword" exact>
           <NewPassword />
         </Route>
         <Redirect to="/" />
