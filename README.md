@@ -30,7 +30,7 @@ JWT_KEY='my-key'
 
 JWT_SECRET ='my-secret'
 
-NEWPASSWORD_URL='http://127.0.0.1:5173/newpassword'
+NEWPASSWORD_URL='http://127.0.0.1:5173/#/newpassword'
 ```
 Frontend .env file
 
