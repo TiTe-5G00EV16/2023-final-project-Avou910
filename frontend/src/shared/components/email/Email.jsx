@@ -42,7 +42,7 @@ const Email = props => {
     <>
 
     <div className="article-item-actions">{auth.isLoggedIn &&
-      <Button onClick={showModalHandler}>BUY</Button>
+      <Button onClick={showModalHandler}>CONTACT</Button>
     }
       </div>
 

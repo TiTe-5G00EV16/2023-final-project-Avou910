@@ -35,13 +35,10 @@ function App() {
     setToken(token);
     setuser(uid);
     setEmail(email);
-    //current date + 1h
+
     const newTokenExpirationDate = 
       expirationDate || new Date(new Date().getTime() + 1000 * 60 * 60);
       setTokenExpirationDate(newTokenExpirationDate);
-
-
-
       localStorage.setItem(
       'userData',
       JSON.stringify({

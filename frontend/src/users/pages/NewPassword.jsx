@@ -1,8 +1,5 @@
 import { useRef, useState, useEffect, } from 'react';
-import { useMutation } from 'react-query';
-import { useParams } from 'react-router-dom';
 import { useLocation, useHistory } from 'react-router-dom';
-
 import Button from '../../shared/components/button/Button';
 import Card from '../../shared/components/card/Card';
 import Input from '../../shared/components/input/Input';

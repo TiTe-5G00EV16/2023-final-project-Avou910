@@ -14,7 +14,6 @@ import './ResetPassword.css';
 const ResetPassword = props => {
 
     const emailRef = useRef();
-    const frontendUrl = import.meta.env.VITE_FRONTEND_URL;
 
     const [isLoading, setIsLoading] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
