@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 
 const users = require('./routes/users');
@@ -25,6 +26,11 @@ app.use('/api/email', email);
 
 app.get('/health', (req, res) => {
   res.send('OK');
+});
+
+app.use(express.static(path.join(__dirname, 'client/build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'client/build/index.html'));
 });
 
 module.exports = app;
