@@ -23,7 +23,7 @@ MYSQL_USERNAME='root'
 
 MYSQL_PASSWORD='example'
 
-MYSQL_DATABASE='example_database'
+MYSQL_DATABASE='example_db'
 
 JWT_KEY='my-key'
 
