@@ -16,7 +16,8 @@ Clone the repo or download .zip.
 Before running the commands you must create .env file for the backend and frontend. Inside the backend .env file you will need:
 
 
-```MYSQL_HOST='localhost'
+```
+MYSQL_HOST='localhost'
 
 MYSQL_USERNAME='root'
 
