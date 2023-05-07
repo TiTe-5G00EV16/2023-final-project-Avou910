@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+<<<<<<< HEAD
+=======
+
+#cypress
+screenshots/
+videos/
+.DS_Store
+>>>>>>> e9a56d2 (first commit)

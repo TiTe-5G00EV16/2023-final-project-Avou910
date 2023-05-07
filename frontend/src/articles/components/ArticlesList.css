@@ -1,0 +1,17 @@
+.articles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 10rem;
+  grid-row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0rem auto;
+  max-width: 100rem;
+}
+
+@media screen and (max-width: 768px) {
+  .article-list {
+    grid-template-columns: repeat(2, minmax(20rem, 1fr));
+  }
+}
